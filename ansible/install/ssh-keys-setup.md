@@ -1,6 +1,6 @@
 ### create a user on all machines ( controller & all targets )
 
-	useradd ansiblebot -m -d /home/ansible -s /bin/bash
+	useradd ansiblebot -m -d /home/ansiblebot -s /bin/bash
 
 ### add user to sudoers for root previliges  on all machines ( all targets )
 
@@ -25,7 +25,7 @@
 		   swith to the user ( su - ansiblebot )
 		   mkdir -p /home/ansiblebot/.ssh
 		   touch /home/ansiblebot/.ssh/authorized_keys
-		   chmod 600 /home/ansiblebot/.ssh/authorized_keys
+		   chmod -R 700 /home/ansiblebot/.ssh/authorized_keys
 		   vi /home/ansiblebot/.ssh/authorized_keys  (enter the copied contet of id_rsa.pub from controller & save the file)
 ```	
 	
